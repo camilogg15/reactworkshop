@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Header from './componentes/classComponent'
+import Footer from './componentes/functionalComponent'
+import Materias from './componentes/materias'
 import './App.css';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+
+    const  materias = [
+      {materia: "CES4", nota: 4},
+      {materia: "BD", nota: 4.5},
+      {materia: "Calculo", nota: 3},
+      {materia: "Fisica", nota: 4}
+    ];
+  
+    return(
+      <div>
+        <Header titulo="My App React" autor="CamiloG"></Header>
+        <Materias materias={materias}></Materias>
+        <Footer fecha="18/03/2019" ></Footer>
+      </div>   
+      );
   }
 }
 
